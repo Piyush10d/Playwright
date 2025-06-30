@@ -9,7 +9,7 @@ test('test login page', { tag: '@fast'}, async ({ page }) => {
   await page.getByRole('link', { name: 'Issues' }).click();
   await expect(page.locator('#hero-section-brand-heading')).toContainText('Project planning for developers');
   await page.getByRole('button', { name: 'Close' }).click();
-  await page.close();
+  await page.isClosed();
   //New changes in master
   await page.getByRole('link', { name: 'Issues' }).click();
   await expect(page.locator('#hero-section-brand-heading')).toContainText('Project planning for developers');
